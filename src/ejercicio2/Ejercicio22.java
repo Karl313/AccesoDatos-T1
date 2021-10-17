@@ -1,6 +1,7 @@
 package Ejercicio2;
 
 import java.io.File;
+import java.util.Scanner;
 
 
 
@@ -8,11 +9,14 @@ public class Ejercicio22 {
    
     public static void main(String[] args) {
         
-    
-    File[] files = new File("C:\\Users\\carlo\\Documents\\NetBeansProjects"
-            + "\\Ejercicio2\\src\\ejercicio2\\Ejercicio21.java").listFiles();
-    if (files != null) 
+    Scanner sc=new Scanner(System.in);
+        System.out.println("introduce el directorio");
+        String directorio=sc.nextLine();
+    File[] files = new File(directorio).listFiles();
+    if (files != null) {
        Dictador(files);
+      
+    }
 }
 
 public static void Dictador(File[] files) {
